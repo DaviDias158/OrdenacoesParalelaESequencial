@@ -1,7 +1,59 @@
 # Análise de Desempenho de Algoritmos de Ordenação em Ambientes Concorrentes e Paralelos: Um Estudo Comparativo em Java
 
+## Como executar o projeto
+
+### Requisitos
+
+Para executar o projeto, é necessário possuir:
+
+- **Java JDK 8 ou superior** instalado.
+- Uma IDE compatível com Java. Recomenda-se o IntelliJ IDEA.
+- Sistema operacional compatível com a execução de aplicações Java com interface gráfica.
+
+Não são necessárias bibliotecas externas, pois o projeto utiliza recursos presentes na biblioteca padrão do Java, incluindo Java Swing, Java2D e `java.util.concurrent`.
+
+### Alunos
+ - Davi Dias Vale - 2410485
+ - João Victor Martins Cid - 2410447
+
+### Execução
+
+1. Baixe ou clone o repositório do projeto no GitHub.
+2. Abra a pasta do projeto no IntelliJ IDEA.
+3. Verifique se o JDK está configurado corretamente nas configurações do projeto.
+4. Localize o arquivo `Main.java`, dentro do pacote `aplicacao`, no caminho `src/aplicacao/Main.java`.
+5. Execute o método `main()` da classe `Main.java`.
+
+A execução iniciará automaticamente os experimentos, percorrendo os algoritmos de ordenação, os diferentes tamanhos e tipos de conjuntos de dados e as configurações de threads definidas no programa.
+
+Após a conclusão dos experimentos, será gerado o arquivo CSV e a interface gráfica será aberta automaticamente.
+
+### Arquivo de resultados
+
+Os resultados são armazenados no seguinte caminho:
+
+```text
+ProjetoOrdenacao/
+└── resultados/
+    └── resultados_testes.csv
+```
+
+A pasta `resultados` é criada automaticamente caso ainda não exista.
+
+O arquivo `resultados_testes.csv` contém os registros individuais das execuções, incluindo o algoritmo utilizado, modo de execução, tipo de dados, tamanho do vetor, quantidade de threads, número da amostra e tempo de execução.
+
+**Importante:** a cada nova execução do programa, o arquivo CSV anterior será sobrescrito pelos novos resultados. Portanto, recomenda-se salvar uma cópia dos resultados anteriores caso seja necessário preservá-los.
+
+### Interface gráfica
+
+Após a geração do CSV, a interface desenvolvida com Java Swing será aberta automaticamente.
+
+Nela, é possível selecionar o algoritmo, o tipo de conjunto de dados e o tamanho do vetor para visualizar os gráficos comparativos dos tempos de execução, além dos indicadores de speedup e eficiência paralela.
+
+O caminho do arquivo CSV utilizado pela interface é o mesmo caminho informado na etapa anterior, não sendo necessário importar os resultados manualmente.
+
 ## Resumo
-Este trabalho apresenta uma análise comparativa do desempenho de quatro algoritmos de ordenação — Bubble Sort, Quick Sort, Merge Sort e Insertion Sort — em implementações sequenciais e paralelas, utilizando a linguagem Java. Os experimentos consideraram conjuntos de dados aleatórios, ordenados em ordem crescente, em ordem decrescente, com valores repetidos e quase ordenados. Os tamanhos dos vetores foram definidos por algoritmo, e as execuções paralelas foram realizadas com 1, 2, 4 e 8 threads. Para cada combinação de algoritmo, tipo de dado, tamanho e quantidade de threads, foram coletadas cinco amostras, após uma execução de aquecimento. Os tempos foram medidos com `System.nanoTime()` e registrados em arquivo CSV. Também foi desenvolvida uma interface gráfica com Java Swing para visualizar e comparar as medições. Os resultados indicaram ganhos de desempenho para Quick Sort e Merge Sort em configurações com múltiplas threads, enquanto as versões paralelas de Bubble Sort e Insertion Sort apresentaram maior custo de execução nas condições avaliadas.
+Este trabalho apresenta uma análise comparativa do desempenho de quatro algoritmos de ordenação, Bubble Sort, Quick Sort, Merge Sort e Insertion Sort, em implementações sequenciais e paralelas, utilizando a linguagem Java. Os experimentos consideraram conjuntos de dados aleatórios, ordenados em ordem crescente, em ordem decrescente, com valores repetidos e quase ordenados. Os tamanhos dos vetores foram definidos por algoritmo, e as execuções paralelas foram realizadas com 1, 2, 4 e 8 threads. Para cada combinação de algoritmo, tipo de dado, tamanho e quantidade de threads, foram coletadas cinco amostras, após uma execução de aquecimento. Os tempos foram medidos com `System.nanoTime()` e registrados em arquivo CSV. Também foi desenvolvida uma interface gráfica com Java Swing para visualizar e comparar as medições. Os resultados indicaram ganhos de desempenho para Quick Sort e Merge Sort em configurações com múltiplas threads, enquanto as versões paralelas de Bubble Sort e Insertion Sort apresentaram maior custo de execução nas condições avaliadas.
 
 ## Introdução
 
